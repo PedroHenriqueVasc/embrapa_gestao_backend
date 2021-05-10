@@ -40,7 +40,7 @@ $rebanho->setDataCadastro($data);
 //echo json_encode($retorno);
 
 $retorno = $rebanho->cadastrarRebanho();
-// $retorno = array('status' => 'Success', 'value' => 'Teste');
+// $retorno = array('status' => 'Success', 'value' => $_POST['id-animal']);
 
 
 echo json_encode($retorno);
