@@ -93,6 +93,7 @@ else{
     }
     
     $especie =$esp[0]['especie'];
+    $rebanho->setEspecie($especie);
     
 
     $retornoRS = $rebanho->cadastrarRebanho();
@@ -399,10 +400,10 @@ else if($tipoParto == 'quadruplo'){
         $rebanho->setDataCadastro($data);
 
         if($_POST['sexo2'] == 'macho'){
-            $rebanho->setCategoria('macho jovem');    
+            $rebanho->setCategoria('macho em lactação');    
         }
         else{
-            $rebanho->setCategoria('fêmea jovem');    
+            $rebanho->setCategoria('fêmea em lactação');    
         }
 
         $query = "select especie from rebanho_simples where raca = '$raca2' and id_propriedade = $array->idPropriedade";    
